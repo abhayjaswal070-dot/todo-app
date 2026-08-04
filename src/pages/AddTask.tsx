@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 interface Todo {
   id: number;
@@ -8,6 +9,8 @@ interface Todo {
 }
 
 function AddTask() {
+
+  const navigate = useNavigate();
 
   const [form, setForm] = useState<Todo>({
     id: Date.now(),
@@ -62,6 +65,8 @@ function AddTask() {
       title: "",
       description: "",
     });
+
+    navigate("/");
   };
   return (
     <>
