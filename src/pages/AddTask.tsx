@@ -73,6 +73,7 @@ function AddTask() {
       <Navbar />
 
       <div className="bg-gray-200 flex items-center h-screen justify-center">
+        <h1 className="text-2xl">Form</h1>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col bg-gray-400 p-10 rounded gap-5"
